@@ -14,3 +14,13 @@ class Vendor:
             result = item
         return result
     
+    def get_by_id(self, item_id):
+
+        results = None
+
+        for item in self.inventory:
+            if item.id == item_id:
+                results = item
+                break
+
+        return results
