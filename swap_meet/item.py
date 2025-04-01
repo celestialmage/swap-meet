@@ -9,3 +9,7 @@ class Item:
 
     def get_category(self):
         return self.category
+    
+
+    def __str__(self):
+        return f"An object of type {self.category} with id {self.id}."
