@@ -2,7 +2,7 @@ from uuid import uuid4
 
 class Item:
     def __init__(self, id=None, condition=0):
-        new_id = id if id != None else uuid4().int % (10**32)
+        new_id = id if id != None else int(uuid4().hex, 16)
 
         self.id = new_id
         self.condition = condition
