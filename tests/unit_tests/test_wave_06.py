@@ -110,8 +110,12 @@ def test_swap_best_by_category():
 
     assert result
     assert len(tai.inventory) == 3
+    assert item_a in tai.inventory
+    assert item_b in tai.inventory
     assert item_f in tai.inventory
     assert len(jesse.inventory) == 3
+    assert item_d in jesse.inventory
+    assert item_e in jesse.inventory
     assert item_c in jesse.inventory
     # *********************************************************************
     # ****** Complete Assert Portion of this test **********
@@ -239,6 +243,11 @@ def test_swap_best_by_category_no_match_is_false():
     )
 
     assert not result
+    assert item_a in tai.inventory
+    assert item_b in tai.inventory
+    assert item_c in tai.inventory
+    assert item_d in jesse.inventory
+    assert item_e in jesse.inventory
     assert item_f in jesse.inventory
     # *********************************************************************
     # ****** Complete Assert Portion of this test **********
@@ -273,7 +282,12 @@ def test_swap_best_by_category_no_other_match_is_false():
     )
 
     assert not result
+    assert item_a in tai.inventory
+    assert item_b in tai.inventory
     assert item_c in tai.inventory
+    assert item_d in jesse.inventory
+    assert item_e in jesse.inventory
+    assert item_f in jesse.inventory
     # *********************************************************************
     # ****** Complete Assert Portion of this test **********
     # *********************************************************************
